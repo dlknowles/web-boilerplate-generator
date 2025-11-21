@@ -11,7 +11,8 @@ VERSION = "0.1.0"
 
 
 def create_web_project(project_name: str) -> None:
-    target_dir = ROOT / project_name
+    cwd = Path.cwd()
+    target_dir = cwd / project_name
 
     if target_dir.exists():
         raise FileExistsError(f"Target directory already exists: {target_dir}")
@@ -38,7 +39,7 @@ def create_web_project(project_name: str) -> None:
         if file_path.exists():
             replace_tokens(file_path)
 
-    print(f"Created web project at: {target_dir}")
+    print(f"Created web project at: {target_dir.resolve()}")
     print("Next steps:")
     print(f"  cd {project_name}")
     print("  npm install")
