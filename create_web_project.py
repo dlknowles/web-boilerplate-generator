@@ -7,6 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 TEMPLATE_DIR = ROOT / "templates" / "base"
+VERSION = "0.1.0"
 
 
 def create_web_project(project_name: str) -> None:
@@ -45,6 +46,7 @@ def create_web_project(project_name: str) -> None:
 
 
 def main(argv: list[str] | None = None) -> None:
+    print(f"web-boilerplate-generator v{VERSION}")
     argv = argv or sys.argv[1:]
     if not argv:
         print("Usage: python create_web_project.py <project-name>")
