@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "web-boilerplate-generator"
+version = "0.1.0"
+description = "Generates a Vite + TypeScript vanilla web project."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+gen-web = "create_web_project:main"
+
+[tool.setuptools]
+py-modules = ["create_web_project"]
