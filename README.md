@@ -1,3 +1,6 @@
+> Archived project. Kept for historical purposes.
+> This work has been superseded by [gen-web](https://github.com/dlknowles/gen-web).
+
 # web-boilerplate-generator
 
 A small CLI tool that scaffolds a modern **Vite + TypeScript** web project in one command.
